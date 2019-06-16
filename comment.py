@@ -224,7 +224,7 @@ def weibo_comment():
         if max_id == "":
             url = "https://m.weibo.cn/comments/hotflow?id=4382820602287745&mid=4382820602287745&max_id_type=0"
         else:
-            url = "https://m.weibo.cn/comments/hotflow?id=4344811987373681&mid=4344811987373681&max_id=" + str(
+            url = "https://m.weibo.cn/comments/hotflow?id=4382820602287745&mid=4382820602287745&max_id=" + str(
                 max_id) + "&max_id_type=0"
         print(url)
         response = requests.get(url, headers=headers, cookies=cookie_dict)
@@ -249,8 +249,8 @@ def weibo_comment():
 
 
 if __name__ == '__main__':
-    username = "18100834668"  # 用户名
-    password = "xuliang130844"  # 密码
+    username = "********"  # 用户名
+    password = "********"  # 密码
     cookie_path = "Cookie.txt"  # 保存cookie 的文件名称
     weibo = WeiboLogin(username, password, cookie_path)
     weibo.login()
